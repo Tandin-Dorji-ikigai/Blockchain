@@ -1,0 +1,40 @@
+.forgot-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.forgot-password-form {
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    padding: 2rem 4rem;
+
+}
+
+.forgot-password-form::after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background: #01D28E;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.forgot-text {
+    color: #01D28E;
+}
+
+.forgot-submit-btn {
+    background: #01D28E;
+    border: none;
+    color: #fff;
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+}

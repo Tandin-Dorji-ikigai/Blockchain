@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./client/css/banner.css">
+    <link rel="stylesheet" href="./client/css/nav.css">
+    <link rel="stylesheet" href="./client/css/card.css">
+    <link rel="stylesheet" href="./client/css/tryNav.css">
+    <link rel="stylesheet" href="./client/css/index.css">
+    <style>
+        .content-container {
+            display: flex;
+        }
+
+        .content-container>* {
+            width: 50%;
+        }
+
+        .right-content {
+            padding-right: 15px;
+        }
+
+        .left-content {
+            height: 100vh;
+            position: relative;
+        }
+
+        .left-content>* {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @media screen and (max-width: 800px) {
+            .left-content {
+                display: none;
+            }
+
+            .right-content {
+                padding-left: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="our-goal-container">
+        <div class="content-container">
+            <div class="left-content">
+
+                <div class="goals" id="goal-content">
+                    GOALS
+                </div>
+            </div>
+
+            <div class="right-content">
+                <div class="goal-card" data-marker-content="goal-content">
+                    <div class="goal-header">
+                        Transparency
+                    </div>
+                    <div class="goal-content">
+                        <span class="goal-text-hide">Hide THis Text</span>
+                        Ensure complete transparency in parliamentary voting
+                        via
+                        blockchain, making all activities publicly accessible, empowering citizens
+                        with
+                        visibility into decision-making
+                    </div>
+                </div>
+
+                <div class="goal-card" data-marker-content="goal-content">
+                    <div class="goal-header">
+                        Efficiency
+                    </div>
+                    <div class="goal-content">
+                        <span class="goal-text-hide">Hide THis Text</span>
+                        Automate voting, removing manual counting. Predefined
+                        rules
+                        ensure swift decisions, letting parliament focus on key legislative tasks.
+                    </div>
+                </div>
+
+
+
+                <div class="goal-card" data-marker-content="goal-content">
+                    <div class="goal-header">
+                        Citizen Engagement
+                    </div>
+                    <div class="goal-content">
+                        <span class="goal-text-hide">Hide THis Text</span>
+                        Fosters citizen participation through proposal
+                        submission,
+                        forums, and real-time voting access, strengthening government-citizen trust
+                        for a
+                        thriving democracy.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <h1 class="header-section">That's it!</h1>
+
+
+
+
+    <a class="gsap-logo" target="_blank" href="https://gsap.com/docs/v3">
+        <img src="https://assets.codepen.io/16327/gsap-logo-light.svg" alt="" />
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+    <script src="./client/js/card.js"></script>
+    <script src="./client/js/smoothScrolling.js"></script>
+
+    <script>
+        console.clear();
+
+        gsap.defaults({ overwrite: 'auto' });
+
+        gsap.set(".left-content > *", { xPercent: -50, yPercent: -50 });
+
+        // Set up our scroll trigger
+        const ST = ScrollTrigger.create({
+            trigger: ".content-container",
+            start: "top top",
+            end: "bottom bottom",
+            onUpdate: getCurrentSection,
+            pin: ".left-content"
+        });
+
+        const contentMarkers = gsap.utils.toArray(".goal-card");
+
+        // Set up our content behaviors
+        contentMarkers.forEach(marker => {
+            marker.content = document.querySelector(`#${marker.dataset.markerContent}`);
+
+            if (marker.content) {
+                gsap.set(marker.content, { transformOrigin: "center" });
+
+                marker.content.enter = function () {
+                    gsap.fromTo(marker.content, { autoAlpha: 0, rotateY: -30 }, { duration: 0.3, autoAlpha: 1, rotateY: 0 });
+                }
+
+                marker.content.leave = function () {
+                    gsap.to(marker.content, { duration: 0.1, autoAlpha: 0 });
+                }
+            }
+
+        });
+
+        // Handle the updated position
+        let lastContent;
+        function getCurrentSection() {
+            let newContent;
+            const currScroll = window.scrollY;
+
+            try {
+                // Find the current section
+                contentMarkers.forEach(marker => {
+                    if (currScroll > marker.offsetTop) {
+                        newContent = marker.content;
+                    }
+                });
+
+                // If the current section is different than the last, animate in
+                if (newContent && (lastContent == null || !newContent.isSameNode(lastContent))) {
+                    // Fade out last section
+                    if (lastContent) {
+                        lastContent.leave();
+                    }
+
+                    // Animate in new section
+                    newContent.enter();
+
+                    lastContent = newContent;
+                }
+            } catch (error) {
+                // Catch and ignore the error
+            }
+        }
+
+        const media = window.matchMedia("screen and (max-width: 600px)");
+        ScrollTrigger.addEventListener("refreshInit", checkSTState);
+        checkSTState();
+
+        function checkSTState() {
+            if (media.matches) {
+                ST.disable();
+            } else {
+                ST.enable();
+            }
+        }
+
+    </script>
+</body>
+
+</html>

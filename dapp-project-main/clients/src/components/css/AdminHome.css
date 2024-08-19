@@ -1,0 +1,246 @@
+.home-container {
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.home-header {
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #02C38D;
+    margin: 2rem auto;
+}
+
+.home-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 70px;
+    row-gap: 30px;
+}
+
+.home-card {
+    flex-basis: 250px;
+    flex-grow: 1;
+    height: 114px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Add some margin between cards */
+}
+
+.home-card-icon {
+    font-size: 40px;
+    color: #02C38D;
+}
+
+.table-head {
+    color: #fff;
+    border-bottom: 1px solid #02C38D;
+
+}
+
+.table-body {
+    color: #fff;
+    border-bottom: 1px solid #02C38D;
+}
+
+.upload-form-container {
+    color: #fff !important;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #02C38D;
+    padding: 1rem;
+    border-radius: 3px;
+
+}
+
+.upload-input {
+    background: transparent !important;
+    border: 1px solid #02C38D !important;
+}
+
+.upload-input:focus {
+    outline: none;
+}
+
+.upload-button {
+    background: #02C38D !important;
+    color: #fff !important;
+}
+
+.upload-button:hover {
+    filter: brightness(90%);
+}
+
+.upload-form {
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+.user-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+}
+
+.user-profile-image {
+    width: 270px;
+    height: 300px;
+
+}
+
+.user-profile-details {
+    width: 270px;
+}
+
+.user-profile-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.user-detail {
+    color: #fff;
+}
+
+.user-detail> :nth-child(1) {
+    font-weight: 700;
+}
+
+.user-detail> :nth-child(2) {
+    padding: 1rem;
+    border-bottom: 1px dashed #02C38D;
+}
+
+.add-user-button {
+    background: #02C38D;
+    color: #fff;
+    width: 270px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.add-user-button:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.edit {
+    background: transparent !important;
+    border: 1px solid #02C38D;
+}
+
+.home-add-user {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background: #0000009d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -5;
+    pointer-events: none;
+}
+
+#toggle:checked~.home-add-user {
+    z-index: 1;
+    pointer-events: all;
+}
+
+.form-label {
+    color: #fff;
+}
+
+.add-form {
+    background: #2E3136;
+    border-radius: 6px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.close-btn {
+    color: #02C38D !important;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.upload-input {
+    color: #fff !important;
+}
+
+.upload-input:active {
+    color: #fff;
+}
+
+.home-edit-user {
+    width: 100%;
+    height: 100%;
+    background: #2e313665;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    z-index: -99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.edit-form-container {
+    width: 100%;
+    max-width: 400px;
+    background: #3D4148;
+    padding: 2rem;
+    color: #fff;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.close-btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-nav-userImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+#showEditProfile:checked~.home-edit-user {
+    z-index: 99;
+    opacity: 1;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .home-card {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .home-card {
+        flex-basis: 100%;
+    }
+}

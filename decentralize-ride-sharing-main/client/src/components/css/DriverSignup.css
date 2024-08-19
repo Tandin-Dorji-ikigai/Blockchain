@@ -1,0 +1,39 @@
+.driver-sign-up-form{
+    flex-direction: column;
+    position: relative;
+}
+
+.signup-nav{
+    position: absolute;
+    top: 40px;
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+.signup-nav::after{
+    position: absolute;
+    content: "";
+    background: #05497C;
+    height: 3px;
+    width: 90%;
+}
+
+.signup-nav-item{
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50px;
+    background: #01D28E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.active{
+    color: #05497C;
+}

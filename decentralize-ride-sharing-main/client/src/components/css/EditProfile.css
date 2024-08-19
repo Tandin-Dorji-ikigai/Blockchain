@@ -1,0 +1,65 @@
+.edit-info-general::after {
+    width: 97px !important;
+}
+
+.edit-profile-about {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.edit-profile-about-detail {
+    text-align: justify;
+}
+
+.save-profile-icon {
+    font-size: 18px;
+}
+
+.profile-edit-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    padding-right: 12px;
+}
+
+.contact-value-container-edit {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-attriute-edit{
+    row-gap: 27px;
+}
+
+.user-profile-contact-info-edit{
+    height: 150px;
+
+}
+
+.edit-info-location::after{
+    width: 103px;
+}
+
+.edit-info-bio::after{
+    width: 60px;
+}
+
+.edit-info-social::after{
+    width: 85px;
+}
+
+.edit-button{
+    margin-left: auto !important;
+    margin-right: 2rem;
+}
+
+.imgbio-edit{
+    align-items: top;
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+

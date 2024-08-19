@@ -1,0 +1,470 @@
+@font-face {
+    font-family: "SF Pro";
+    src: url('../../../public/fonts/SFPRODISPLAYREGULAR.OTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.image-container {
+    /* background-image: url("../../Img/woman-in-vintage-car.jpg"); */
+    margin-top: 70px;
+    /* background: #fff; */
+    width: 100%;
+    height: 89vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #bdc1c6;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.scrolling-wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    /* max-width: 1300px; */
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS devices */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    height: 400px;
+    background: #ffffff;
+    position: relative;
+}
+
+.home-hero-scroll-card img {
+    height: 400px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+    /* Webkit-based browsers */
+}
+
+.scroll-container {
+    overflow: hidden;
+    position: relative;
+    margin-top: 3rem;
+
+}
+
+.scroll-ellipse-top {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: -77px;
+}
+
+.scroll-ellipse-bottom {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    bottom: -104px;
+    display: none;
+
+}
+
+.home-hero-scroll-card {
+    width: 400px;
+    height: 100%;
+    background: #ffffff;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    column-gap: 15px;
+}
+
+.rider-cta-container {
+    position: absolute;
+    top: 80px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #003024;
+    row-gap: 20px;
+}
+
+.rider-hero-content {
+    padding-top: 4rem;
+}
+
+.rider-cont {
+    margin-top: auto !important;
+}
+
+.rider-home-hero {
+    width: 100%;
+    max-width: 600px;
+    background: #000000a2;
+    height: 50%;
+}
+
+.bookNow-button {
+    width: 185px;
+    height: 56px;
+    font-size: 16px;
+    background: #01D28E;
+    border: none;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.bookNow-button:hover {
+    background: #fff;
+    color: #003024;
+    border: 1px solid #01D28E;
+}
+
+.booking-form-container {
+    width: 430px;
+    background: #0E2A47;
+    background: #FFFFFF;
+    color: #bdc1c6;
+    color: #0E2A47;
+    height: 560px;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    opacity: .9;
+}
+
+.booking-form-container h4 {
+    font-weight: bolder;
+}
+
+.booking-form-container form {
+    margin-top: 2rem;
+}
+
+.booking-form-container form div input {
+    height: 45px;
+    border-radius: 1px;
+    border: 1px solid #bdc1c6;
+    background: #ffffff;
+    color: #003024;
+}
+
+.booking-form-container form div input::placeholder {
+    color: #003024;
+}
+
+.booking-form-container form div input:focus {
+    /* background: #41DDAA; */
+    border: 1px solid #FFFFFF;
+    color: #003024;
+    outline: none !important;
+
+}
+
+.booking-form-container form div label {
+    margin-top: 1rem;
+    font-size: 15px;
+}
+
+.booking-step-container {
+    width: 650px;
+    height: 320px;
+    background: #FFFFFF;
+    padding: 2rem;
+    /* border-radius: 6px; */
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-top: 2rem;
+    color: #000000;
+    font-weight: 700;
+    opacity: .9;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    align-self: flex-start;
+
+}
+
+.booking-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 12rem;
+    margin-bottom: 10rem;
+}
+
+.inside-form {
+    width: 100%;
+    background: #01D28E;
+    color: #FFFFFF;
+    border-radius: 1px;
+}
+
+.inside-form:hover {
+    border: 1px solid #000000;
+}
+
+.step-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    margin-top: 3rem;
+}
+
+.step-icon {
+    font-size: 80px;
+    color: #FFFFFF;
+    background: #01D28E;
+    border-radius: 50px;
+    padding: 1rem;
+}
+
+.steps-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.steps-content> :nth-child(2) {
+    color: #003024;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+
+.rider-feedback-form-header {
+    display: flex;
+    column-gap: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.feedback-form-logo-name span {
+    color: #01D28E;
+}
+
+.rider-feedback-form-container {
+    background: #fff;
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding-top: 1rem;
+    color: #05497C;
+    border-radius: 10px;
+}
+
+.rider-feedback-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 3rem 1rem;
+    position: relative;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.rider-feedback-form::after {
+    content: "";
+    width: 100%;
+    background: #01D28E;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.form-trip-question {
+    font-weight: 500;
+    margin-top: 1.5rem;
+    color: #05497C;
+    font-size: 16px;
+}
+
+.home-feedback-user-name {
+    color: #01D28E;
+    text-decoration: underline;
+}
+
+.feedback-rating-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+.feedback-share {
+    font-weight: 500;
+    margin: 2rem 0;
+    font-size: 17px;
+    color: #05497C;
+}
+
+.feedback-submit-button {
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-option-container {
+    width: 25%;
+}
+
+.user-rating-btn {
+    height: 35px;
+    width: 100%;
+    color: #003024;
+    border: 1px solid #003024;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in .3s;
+}
+
+.feedback-rating {
+    display: none;
+}
+
+.user-rating-btn:hover {
+    cursor: pointer;
+}
+
+.rating-option-container input[type="radio"]:checked+label {
+    background-color: #003024;
+    color: #ffffff;
+}
+
+.rider-accept-details {
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+
+    .image-container {
+        height: 70vh;
+    }
+
+    .rider-cta-container {
+        text-align: center;
+        top: 40px;
+    }
+
+    .scroll-container {
+        height: 270px;
+        margin-top: 1rem;
+    }
+
+    .home-hero-scroll-card img {
+        height: 270px;
+    }
+
+    .bookNow-button {
+        width: 145px;
+        height: 42px;
+        margin-top: 0rem;
+
+    }
+
+    .booking-container {
+        padding-left: 15px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .booking-step-container {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .step-icon {
+        font-size: 50px;
+        color: #FFFFFF;
+        background: #01D28E;
+        border-radius: 50px;
+        padding: 10px;
+    }
+
+    .steps-content> :nth-child(2) {
+        color: #003024;
+        font-weight: 200;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .step-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .booking-form-container {
+        width: 100%;
+    }
+
+    .inside-form {
+        width: 100%;
+        margin-top: 2rem;
+        margin: 0 auto;
+
+    }
+
+    .booking-form-container {
+        height: fit-content;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+
+
+    .image-container {
+        height: 70vh;
+    }
+
+    .rider-cta-container {
+        text-align: center;
+    }
+
+    .scroll-container {
+        height: 270px;
+    }
+
+    .home-hero-scroll-card img {
+        height: 270px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+
+    .bookNow-button {
+        margin-top: 0rem;
+        width: 150px;
+        height: 50px;
+    }
+
+    .booking-container {
+        padding-left: 15px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .inside-form {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 2rem;
+    }
+
+}

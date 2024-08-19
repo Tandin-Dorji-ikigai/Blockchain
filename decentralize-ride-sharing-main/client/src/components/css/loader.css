@@ -1,0 +1,9 @@
+.loader-triangle{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3e2e2;
+    transition: all .3s ease-in-out;
+}

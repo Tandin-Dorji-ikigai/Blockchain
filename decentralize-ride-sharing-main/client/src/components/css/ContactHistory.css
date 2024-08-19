@@ -1,0 +1,37 @@
+.contact-container{
+    margin-top: 100px;
+    margin-bottom: 2rem;
+}
+
+.navbar {
+    margin-left: -35px;
+}
+
+.custom-table {
+    border: 2px solid #05497C;
+}
+
+.thead-blue {
+    background-color: #05497C;
+    color: white;
+}
+
+
+th.forth,
+td.forth {
+    border-right: 1px solid #05497C;
+}
+
+.contact-write-back{
+    max-width: 700px !important;
+    background: #FBF8F1 !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        margin-left: 10%;
+        align-items: center;
+        width: 100%;
+    }
+}

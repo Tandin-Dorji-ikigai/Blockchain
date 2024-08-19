@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+.login-logo {
+    width: 250px;
+    height: 180px;
+}
+
+.login-logo-name {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 40px;
+}
+
+.login-text {
+    color: #01D28E;
+    text-align: center;
+}
+
+.login-logo-name span {
+    color: #01D28E;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.login-logo-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #FBF8F1;
+    row-gap: 40px;
+}
+
+.login-form-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 1rem;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.login-form-button {
+    width: 100% !important;
+    max-width: 300px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.forgot-password {
+    color: #01D28E;
+    text-decoration: underline;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signup-as-company {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #01D28E;
+}
+
+.redirect-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+}
+
+.redirect-button-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.redirect-btn {
+    text-decoration: none;
+    color: #01D28E;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    position: relative;
+    font-weight: 600;
+    width: 150px;
+}
+
+
+
+.redirect-btn:hover {
+    color: #000;
+    position: relative;
+}
+
+.redirect-btn::after {
+    transition: all .3s ease-in-out;
+    position: absolute;
+    content: " ";
+    bottom: -5px;
+    width: 0%;
+    height: 4px;
+    background-color: #01D28E;
+}
+
+.redirect-btn:hover::after {
+    width: 100%;
+}
+
+.user-driver,
+.user-rider {
+    width: 100px;
+}
+
+.signup-location{
+    font-weight: 600;
+    margin-bottom: -8px !important;
+}
+
+
+
+@media (max-width: 811px) {
+    .login-logo-container {
+        display: none;
+        /* Hide the logo container */
+    }
+
+    .login-form-container {
+        flex: 1;
+        /* Take up full width */
+    }
+}

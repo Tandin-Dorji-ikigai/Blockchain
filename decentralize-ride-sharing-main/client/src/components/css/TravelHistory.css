@@ -1,0 +1,48 @@
+.bill-receipt::after {
+    width: 93px !important;
+}
+
+.receipt-date {
+    color: #01D28E;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.receipt-container {
+    row-gap: 20px !important;
+}
+
+.receipt-pop-container{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.amount-sent{
+    display: flex;
+    justify-content: space-between;
+    color: #01D28E;
+    margin-top: 1rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.amount-sent >:nth-child(1) {
+    width: 220px !important;
+    text-align: left;
+    font-size: 13px;
+}
+.amount-sent >:nth-child(3){
+    width: 120px !important;
+    text-align: right;
+    font-weight: 700;
+}
+
+.amount-line{
+    width: 100% !important;
+    border-bottom: 2px solid #01D28E;
+}
+@media screen and (max-width: 768px) {
+  .receipt-contact-value{
+    overflow: scroll;
+  }
+}

@@ -1,0 +1,64 @@
+.about-hero-container {
+    width: 100%;
+    height: 95vh;
+    background-image: url('../image/about-background.png');
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content{
+    background: #3D4148;
+    padding: 4rem 0;
+}
+
+.content{
+    columns: 200px 2;
+    column-gap: 100px;
+    text-align: justify;
+    color: #fff;
+    row-gap: 50px;
+    line-height: 40px;
+    margin-top: 6rem;
+}
+.about-vision-container{
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100% !important;
+    max-width: 1000px !important;
+    column-gap: 50px;
+}
+
+.vision-img{
+    width: 400px;
+    height: 350px;
+}
+
+.vision-qutation-container{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    justify-content: space-evenly;
+    
+}
+
+.vision-line{
+    width: 100%;
+    max-width: 240px;
+    height: 2px;
+    background: #08B686;
+}
+
+.vision-content{
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+    line-height: 50px;
+    margin-top: 2rem;
+    text-align: justify;
+}

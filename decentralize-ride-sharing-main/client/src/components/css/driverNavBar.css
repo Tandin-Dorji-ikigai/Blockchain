@@ -1,0 +1,41 @@
+.driver-nav {
+    background: #0E2A47;
+    /* border-radius: 131px; */
+    /* margin: 1rem 3rem 1rem 3rem; */
+}
+
+.driver-links {
+    color: #bdc1c6;
+}
+
+.driver-logo-name {
+    color: #bdc1c6;
+}
+
+.nav-ham-menu {
+    color: #bdc1c6;
+}
+.driver-profile{
+    background: #01D28E;
+    color: #FFFFFF;
+}
+
+.driver-profile > :nth-child(1){
+    color: #FFFFFF;
+    font-weight: 700;
+    filter: brightness(100%);
+}
+
+.driver-links li:hover{
+    cursor: pointer;
+    color: #01D28E;
+}
+
+@media only screen and (max-width: 767px) {
+    .driver-nav {
+        background: #FFFFFF;
+        border-radius: 131px;
+        margin: 0;
+        border-radius: 0;
+    }
+}
